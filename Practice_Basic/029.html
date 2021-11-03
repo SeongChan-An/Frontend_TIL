@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 클래스 선택자</title>
+    <style>
+        .foo:nth-child(odd) {
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="foo">1</li>    <!-- .foo:first-child -->
+        <li class="foo">2</li>    
+        <li class="foo">3</li>    <!-- .foo:nth-child(3) -->
+        <li class="foo">4</li>
+        <li class="foo">5</li>    <!-- .foo:last-child -->
+    </ul>
+    <!-- 
+        **.foo:first-child :** class="foo"인 ****엘리먼트 중 첫번째 자식인 엘리먼트를 선택
+
+        **.foo:last-child :** class="foo"인 ****엘리먼트 중 마지막 자식인 엘리먼트를 선택
+
+        **.foo:nth-child(n)** class="foo"인 엘리먼트 중 n번째 자식인 엘리먼트를 선택
+
+        **.foo:nth-child(odd)** class="foo"인 엘리먼트 중 홀수 번째 자식인 엘리먼트를 선택
+
+        **.foo:nth-child(even)** class="foo"인 엘리먼트 중 짝수 번째 자식인 엘리먼트를 선택
+
+        **.foo:nth-child(3n+1)** class="foo"인 엘리먼트 중 3n+1번째 자식인 엘리먼트를 선택
+     -->
+</body>
+</html>
