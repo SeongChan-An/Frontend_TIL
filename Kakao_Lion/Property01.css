@@ -1,0 +1,39 @@
+.a {
+  box-sizing: content-box;
+  width: 200px;
+  height: 200px;
+  border: 10px solid red;
+  border-radius: 100%;
+  background: #000;
+}
+
+.b {
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  border: 10px solid red;
+  border-radius: 100%;
+  background: #000;
+}
+
+/* just for demo */
+* {
+  text-align: center;
+}
+.wrap {
+  margin: 0 auto;
+  width: 460px;
+  overflow: hidden;
+}
+.wrap div {
+  float: left;
+  margin: 10px;
+  color: #fff;
+  outline: 1px dashed #aaa;
+}
+.wrap span {
+  display: block;
+  float: left;
+  margin: 15px;
+  width: 200px;
+}
