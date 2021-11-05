@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naver Login Button</title>
+    <style>
+        :root {
+            width: 400px;
+            height: 300px;
+            background: beige;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        li {
+            list-style: none;
+            display:inline-block;
+        }
+   
+        section {
+            display: flex;
+            background-color: whitesmoke;
+        }
+
+        .Login.Bottom {
+            display:flex;    
+            padding-left: 0;
+            justify-content: space-between;
+            
+        }
+
+        .Login.button {
+            display:flex;
+        }
+
+        p {
+            font-size: 0.5em;
+        }
+        
+        a {
+            display: flex;
+            position: relative;
+            width: 80%;
+            padding: 10px;
+            align-items: center;
+
+        }
+
+        .register {
+            right: 20px;
+            padding-right: 10%;
+        }
+        .find>img,
+        .register>img {
+            width: 10px;
+            height: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="Login Desc">
+        <p>네이버를 더 안전하고 편리하게 이용하세요</p>
+    </section>
+    <section class="Login Button">      
+        <a class="Button">
+            <img src="./images/title.png" alt="">
+            로그인
+        </a>
+    </section>
+    <section class="Login Bottom">
+        <ul class="find">
+            <img src="./images/lock.png" alt="">
+            <li>
+                <a href="">아이디</a>
+            </li>
+            <div></div>
+            <li>비밀번호 찾기</li>
+        </ul>
+        <ul class="register">
+            <img src="./images/user.png" alt="">
+            <li>회원가입</li>
+        </ul>
+    </section>
+</body>
+</html>
