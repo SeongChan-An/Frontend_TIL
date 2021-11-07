@@ -1,5 +1,6 @@
 /* 가상 클래스를 이용하여 기본 설정을 해준다. */
 :root {
+  /* 눈이 아프니 흰 바탕을 없애준다. */
   background: beige;
   /* 이건 margin의 영향만 받아서 내가 복잡한 생각을 하지 않도록 */
   box-sizing: border-box;
