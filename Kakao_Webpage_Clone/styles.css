@@ -20,7 +20,7 @@ svg {
   justify-content: space-between;
   align-items: center;
   padding: 0 200px;
-  line-height: 72px;
+  /* line-height: 72px; */
   font-weight: 700;
 }
 
