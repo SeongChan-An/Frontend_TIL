@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- 강사의 네이버 코드 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버 로그인</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        .cont {
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 350px;
+            padding: 16px 16px 12px 17px;
+            height: 20vh;
+        }
+
+        p {
+            text-align: left;
+            padding: 20px 0 0 20px;
+        }
+
+        .cont .link-login {
+            background: rgb(127, 194, 27);
+            width: 50%;
+            text-align: center;
+            justify-content: space-around;
+            text-decoration: none;
+        }
+
+        .bottom {
+            display: flex;
+        }
+
+        .link-login {
+            padding: 15px 0;
+            background: #19ce60;
+            text-decoration: none;
+            color: #fff;
+            font-size: 13px;
+            margin-bottom: 10px;
+            /* 글자를 가운대로 정렬합니다. */
+            text-align: center;
+        }
+
+        .link-login img {           
+            width: 60px;
+            height: 12px;
+            margin-right: 5px;
+            /* 상하 정렬을 조정해줍니다. 오직 inline, inline-block 요소에서만 작동합니다. */
+            vertical-align: -1px;
+        }
+
+        .find img {
+            width: 10px;
+            height: 14px;
+        }
+
+        .find a,
+        .join a {
+            text-decoration: none;
+            color: #404040;
+            font-size: 12px;
+        }
+
+        .join img {
+            width: 11px;
+            height: 11px;
+            /* 상하 정렬을 조정해줍니다. 오직 inline, inline-block 요소에서만 작동합니다. */
+            vertical-align: -1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cont">
+        <p>네이버를 더 안전하고 편리하게 이용하세요</p>
+        <a href="" class="link-login"><img src="images/title.png" alt="네이버">로그인</a>
+        <div class="bottom">
+            <div class="find">
+                <img src="images/lock.png" alt="">
+                <a href="" class="link-find">아이디</a>
+                <a href="">비밀번호찾기</a>
+            </div>
+            <div class="join">
+                <img src="images/user.png" alt="">
+                <a href="">회원가입</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
