@@ -70,11 +70,11 @@
             </ul>
         </section>
     </section>
-    <footer id="cont-company" class="cont-company">
-        <section class="cont-coInfo">
+    <footer>
+        <section>
             <h2 class="sr-only">Company Info</h2>
-            <strong class="tit-company">Jungle Cinema</strong>
-            <dl class="list-coInfo">
+            <strong>Jungle Cinema</strong>
+            <dl>
                 <dt class="sr-only">Company name</dt>
                 <dd>Jungle Inc</dd>
                 <dt>CEO</dt>
@@ -87,12 +87,12 @@
                 <dd>Seoul</dd>                
             </dl>
             <em class="sr-only">link list</em>
-            <ul class="list-sns">
-                <li><a href="#none" class="link-twitter">facebook</a></li>
-                <li><a href="#none" class="link-insta">twitter</a></li>
-                <li><a href="#none" class="link-facebook">instagram</a></li>
+            <ul>
+                <li><a href="#none">facebook</a></li>
+                <li><a href="#none">twitter</a></li>
+                <li><a href="#none">instagram</a></li>
             </ul>
-            <small class="txt-copy">Copyright &copy; 2021 xx rights reserved</small>
+            <small>Copyright &copy; 2021 xx rights reserved</small>
             
         </section>
     </footer>
