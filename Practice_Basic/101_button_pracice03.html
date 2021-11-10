@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        div { position: absolute; width: 150px;; height: 150px;; padding: 5px; transition: .5s ease; cursor:pointer; }
+        span { background: white; width: 28px; height:2px;  display: block; margin-bottom:5px; }
+        div:hover { background: #885555 }
+        div:hover .one { transform: translateY(7px) rotateZ(135deg); }
+        div:hover .two { opacity: 0; }
+        div:hover .three { transform: translateY(-7px) rotateZ(-135deg); }
+        .one { transform: 0 }
+        .three { transform: 0 }
+        .two { opacity: 1 }        
+    </style>
+</head>
+<body>
+    <div>
+        <span class="one">
+        <span class="two">
+        <span class="three">
+    </div>
+</body>
+</html>
