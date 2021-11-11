@@ -55,6 +55,10 @@
   display: flex;
   justify-content: center;
 }
+.c1 img {
+  width: 850px;
+  height: 180px;
+}
 
 .c2 {
   height: 100px;
