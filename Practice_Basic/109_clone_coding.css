@@ -97,7 +97,8 @@
   background-image: url("./10000hours/from_teacher/images-law/txt-right.png");
 }
 
-.cont-inp, .cont-result {
+.cont-inp,
+.cont-result {
   font-size: 24px;
   line-height: 24px;
 }
@@ -135,11 +136,19 @@
   border: none;
 }
 
-.cont-inp .btn-exc::after {
+.cont-inp .btn-exec {
+  position: relative;
+}
+
+.cont-inp .btn-exec::after {
   display: block;
+  position: absolute;
+  right: -80px;
+  bottom: -20px;
   content: "";
   width: 64px;
   height: 72px;
+  background-image: url("./10000hours/from_teacher/images-law/hand.png");
 }
 
 .cont-result .txt-wannabe,
