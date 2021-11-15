@@ -34,8 +34,7 @@ body {
 }
 
 /* 초기화 */
-ul,
-li {
+ul {
   list-style: none;
 }
 
@@ -251,9 +250,6 @@ body > .info {
 @media screen and (min-width: 768px) {
   .infoAndUpNext {
     flex-direction: row;
-  }
-
-  .upNext {
-    padding: var(--spacing);
+    margin: var(--spacing) 0;
   }
 }
