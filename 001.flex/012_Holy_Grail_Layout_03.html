@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9d6399b24a.js" crossorigin="anonymous"></script>
+    <title>From dreamful</title>
+    <style>
+        body {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .skip {
+            position: absolute;
+            left: -9999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        .wrap-width  {
+            display: flex;
+            border: 1px solid black;
+        }
+        .header {
+            width: 100%;
+        }
+        .header .wrap-width {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .header .wrap-width .gnb ul {
+          display: flex;
+        }
+
+        .header .wrap-width .gnb ul li{
+          padding: 10px;
+        }
+        footer {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+      <!-- 건너뛰기 링크 -->
+  <ul class="skip">
+    <li><a href="#">Menu List1</a></li>
+    <li><a href="#">Menu List2</a></li>
+    <li><a href="#">Menu List3</a></li>
+  </ul>
+  <!-- //건너뛰기 링크 끝 -->
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="wrap-width">
+      <h1 class="logo"><a href="/">From dreamful<span>bud</span></a></h1>
+      <nav class="gnb">
+        <ul>
+          <li class="item">
+            <a href="#">About Me</a>
+          </li>
+          <li class="item">
+            <a href="#">Skills</a>
+          </li>
+          <li class="item has-submenu">
+            <a href="#">Blog</a>
+            <ul>
+              <li><a href="#">HTML</a></li>
+              <li><a href="#">CSS</a></li>
+              <li><a href="#">JavaScript</a></li>
+              <li><a href="#">Infra</a></li>
+              <li><a href="#">Node</a></li>
+            </ul>
+          </li>
+          <li class="item"><a href="#">Contact</a></li>
+          <li class="toggle">
+            <a href="#"><i class="fas fa-bars"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- // HEADER -->
+  <!-- MAIN -->
+  <main class="wrap-width">
+    <section>
+      <h2>Section</h2>
+      <article>
+        <h3>List Bullet Style</h3>
+        <ul class="bullet">
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat in optio dolore facilis, libero eum
+            aliquam doloribus adipisci illo doloremque eius? A nesciunt pariatur sunt ducimus iusto perferendis magnam
+            eius!</li>
+          <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat in optio dolore facilis, libero eum
+            aliquam doloribus adipisci illo doloremque eius? A nesciunt pariatur sunt ducimus iusto perferendis magnam
+            eius!</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Table</h3>
+        <table class="table">
+          <caption class="a11y-hidden">성인 남성 운동화 사이즈표</caption>
+          <thead>
+            <tr>
+              <th scope="col" rowspan="2">th</th>
+              <th scope="colgroup" colspan="5">thead th colgroup</th>
+            </tr>
+            <tr>
+              <th scope="col">thead th</th>
+              <th scope="col">thead th</th>
+              <th scope="col">thead th</th>
+              <th scope="col">thead th</th>
+              <th scope="col">thead th</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">tbody th</th>
+              <td>td</td>
+              <td>td</td>
+              <td>td</td>
+              <td>td</td>
+              <td>td</td>
+            </tr>
+            <tr>
+              <th scope="row">tbody th</th>
+              <td>td</td>
+              <td>td</td>
+              <td>td</td>
+              <td>td</td>
+              <td>td</td>
+            </tr>
+            <tr>
+              <th scope="row">tbody th</th>
+              <td>td</td>
+              <td>td</td>
+              <td>td</td>
+              <td>td</td>
+              <td>td</td>
+            </tr>
+            <tr>
+              <th scope="row">tbody th</th>
+              <td>td</td>
+              <td>td</td>
+              <td>td</td>
+              <td>td</td>
+              <td>td</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row">tfoot th</th>
+              <td>td</td>
+              <td>td</td>
+              <td>td</td>
+              <td>td</td>
+              <td>td</td>
+            </tr>
+          </tfoot>
+        </table>
+      </article>
+    </section>
+    <aside>
+      <h2>Aside</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque porro cumque debitis iure voluptates vero
+        libero reiciendis mollitia, accusamus dolore eveniet eaque, ab labore veritatis harum aliquid. Animi, ipsum
+        cumque?</p>
+    </aside>
+  </main>
+  <!-- // MAIN -->
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap-width">
+      <h2>Footer</h2>
+      <small>Copyright</small>
+    </div>
+  </footer>
+  <!-- // FOOTER -->
+</body>
+</html>

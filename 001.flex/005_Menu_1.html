@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu_001</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .container-color {
+            background-color: cornsilk;
+            border: 3px solid black;
+            height: 75px;
+            padding: 5px;
+        }
+
+        .item-color {
+            background-color: darkcyan;
+            border: 3px solid black;
+            border-radius: 10px;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .item {
+            width: 20%;
+            text-align: center;
+            color: white;
+            font-size: 1.2em;
+            font-weight: 700;
+            line-height: 2.5em;
+            transition: all 2s;
+        }
+
+        .item:hover {
+            width: 22%;
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <ul class="container-color container">
+        <li class="item-color item">LOGO</li>
+        <li class="item-color item">ABOUT ME</li>
+        <li class="item-color item">SKILL</li>
+        <li class="item-color item">PORTFOLIO</li>
+        <li class="item-color item">CONTACT</li>
+    </ul>
+    <pre>
+        /* Keyword values */
+        flex: auto;
+        flex: initial;
+        flex: none;
+
+        /* One value, unitless number: flex-grow */
+        flex: 2;
+
+        /* One value, length or percentage: flex-basis */
+        flex: 10em;
+        flex: 30%;
+
+        /* Two values: flex-grow | flex-basis */
+        flex: 1 30px;
+
+        /* Two values: flex-grow | flex-shrink */
+        flex: 2 2;
+
+        /* Three values: flex-grow | flex-shrink | flex-basis */
+        flex: 2 2 10%;
+
+        /* Global values */
+        flex: inherit;
+        flex: initial;
+        flex: unset;
+    </pre>
+</body>
+</html>

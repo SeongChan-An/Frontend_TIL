@@ -4,23 +4,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9d6399b24a.js" crossorigin="anonymous"></script>
     <title>Youtube Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header>
-        <nav>
-            <button></button>
-
-        </nav>
+        <div class="logo">
+            <i class="fab fa-youtube"></i>
+            <span class="title">Youtube</span>
+        </div>
+        <div class="icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-elipsis-v"></i>
+        </div>
     </header>
-    <section>
-        <!-- video -->
+
+    <!-- Video Player -->
+    <section class="player">
+        <video src="video/video.mp4"></video>
     </section>
-    <section>
-        <!-- 제목, ul태그 버튼 -->
+
+    <!-- Video Info -->
+    <section class="info">
+        <!-- .metadata+.action+.channel -->
+        <!-- Metadata -->
+        <div class="metadata">
+            <!-- ul.hastages+.titleAndButton+.views -->
+            <ul class="hastages">
+                <li>#Programmer</li>
+                <li>#FrontEnd</li>
+                <li>#DreamCoding</li>
+            </ul>
+            <div class="titleAndButton">
+                <span class="title">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, vitae? Dolorem, dolore minima error laborum placeat nam sapiente, porro iusto suscipit laboriosam, cum labore rerum earum nulla voluptatum saepe aliquam!
+                </span>
+                <button class="moreBtn"><i class="fas fa-caret-down"></i>
+                </button>
+            </div>
+            <div class="views">
+                <span class="views">1M views 1 month ago </span>
+            </div>
+        </div>
+        <!-- Actions -->
+        <div class="action">
+            <li>
+                <button><i class="fas fa-thumbs-up"></i><span>1K</span></button>
+            </li>
+            <li>
+                <button><i class="fas fa-thumbs-down"></i><span>0</span></button>
+            </li>
+            <li>
+                <button><i class="fas fa-share"></i><span>share</span></button>
+            </li>
+            <li>
+                <button><i class="fas fa-plus"></i><span>save</span></button>
+            </li>
+            <li>
+                <button><i class="fas fa-font-awsome-flag"></i><span>Report</span></button>
+            </li>
+        </div>
+        <!-- Channel Description -->
+        <div class="channel">
+            <div class="metadata">
+                <img src="../img/Anphaca.jpg" alt="">
+                <div class="info">
+                    <span class="name">Anphaca</span>
+                    <div class="subscribers">1M subscribers</div>
+                </div>
+            </div>
+            <button class="subscribe">Subscribe</button>
+        </div>
     </section>
-    <section>
-        <!-- 리스트 -->
+    <section class="UpNext">
+        <span class="title">Up Next</span>
+        <ul>
+            <li class="item">
+                <img src="../img/Paris.jpg" alt="">
+                <div class="info">
+                    <span class="title">Practice</span>
+                    <span class="name">Anphaca</span>
+                    <span class="views">82K views</span>
+                </div>
+                <button class="moreBtn"><i class="fas fa-elipsis-v"></i></button>
+            </li>
+            <li class="item"></li>
+            <li class="item"></li>
+        </ul>
     </section>
 </body>
 </html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-3</title>
+    <style>
+        .container-color {
+            background-color: cornsilk;
+            border: 1px solid 3px black;
+            border-radius: 10px;            
+            height: 300px; /* flex 일 경우 contents의 높이만큼 */
+            margin: 5px;
+            padding: 5px;
+        }
+        .item-color {
+            background-color: darkcyan;
+            border: 3px solid black;
+            border-radius: 10px;
+            margin: 5px;
+            padding: 5px;
+        }
+        .container1 {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .item {
+            flex-grow: 1;
+        }
+
+        .item:nth-child(1)  {
+            flex-basis: 500px;
+            /* 줄어드는 최소한의 넓이. 0일 경우 자신의 영역을 줄이려고 하지 않음 */
+            flex-shrink: 1;
+        }
+        .item:nth-child(2)  {
+            flex-basis: 500px;            
+            flex-shrink: 2;
+        }
+       
+     
+    </style>
+</head>
+<body>
+    display: flex에 flex-grows 실습
+    <div class="container-color container1">
+        <div class="item-color item">Lorem.</div>
+        <div class="item-color item">Lorem, ipsum.</div>
+        <div class="item-color item">Lorem, ipsum dolor.</div>
+        <div class="item-color item">Lorem ipsum dolor sit.</div>
+    </div>
+</body>
+</html>
