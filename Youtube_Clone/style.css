@@ -104,15 +104,19 @@ body > .info {
 .info .metadata .titleAndButton .title {
   font-size: var(--font-medium);
   width: 300px;
+  margin-right: var(--side-padding);
+}
+
+.info .metadata .titleAndButton .title.clamp {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
-  margin-right: var(--side-padding);
 }
 
 .info .metadata .titleAndButton .moreBtn {
   height: 100%;
+  transition: transform 300ms ease-in-out;
 }
 
 .info .views {
