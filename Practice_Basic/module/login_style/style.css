@@ -1,0 +1,27 @@
+#appLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.cont-login {
+  width: 440px;
+  height: 172px;
+  padding: 38px 30px 30px;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  text-align: center;
+}
+.cont-login .tit-weniv img {
+  /*
+    이미지가 display 설정을 하지 않으면 inline 요소 
+    baseline이 있기 때문에 top으로 정렬하지 않으면 움직임
+    현재는 reset css에 설정함
+    vertical align baseline
+    */
+  width: 122px;
+}
+.cont-login .txt-login {
+  margin: 32px 0 36px;
+}
