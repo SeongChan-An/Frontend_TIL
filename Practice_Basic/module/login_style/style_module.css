@@ -1,3 +1,21 @@
+@charset "utf-8";
+/* base */
+@font-face {
+  font-family: Spoqa Han Sans Neo;
+  src: url("../font/SpoqaHanSansNeo-Regular.woff") format("woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: Spoqa Han Sans Neo;
+  src: url("../font/SpoqaHanSansNeo-Medium.woff") format("woff");
+  font-weight: 500;
+}
+@font-face {
+  font-family: Spoqa Han Sans Neo;
+  src: url("../font/SpoqaHanSansNeo-Bold.woff") format("woff");
+  font-weight: 700;
+}
+
 .btn-login {
   width: 100%;
   padding: 17px 0 15px;
@@ -14,6 +32,7 @@
 .btn-close {
   width: 16px;
   height: 16px;
+  padding: 0;
   background-color: #fff;
   border: none;
   cursor: pointer;

@@ -4,67 +4,11 @@ body {
   margin: 0;
 }
 
-a :active :hover {
-  text-decoration: none;
-  color: black;
-}
-
-svg {
-  vertical-align: top;
-  width: 24px;
-  height: 24px;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 200px;
-  /* line-height: 72px; */
-  font-weight: 700;
-}
-
-.navbar_menu {
-  display: flex;
-  list-style: none;
-  padding-left: 0;
-}
-
-.navbar_logo {
-  font-size: 24px;
-}
-
-.navbar_menu li {
-  padding: 0px 28px;
-  font-size: 21px;
-}
-
-.navbar_menu li a {
-  text-decoration: none;
-  color: black;
-}
-
-.navbar_menu li a:hover {
-  text-decoration: none;
-  color: grey;
-}
-
-.navbar_toggleBtn {
-  display: none;
+.sr-only {
   position: absolute;
-  right: 32px;
-  font-size: 24px;
-}
-
-.navbar_right_button {
-  display: inline-block;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  padding: 0;
-  background: none;
-  width: 72px;
-  height: 72px;
-  border-radius: 18px;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
