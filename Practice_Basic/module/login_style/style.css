@@ -107,6 +107,7 @@
 }
 /* 접근성 */
 .form-login .inp-hold:focus + .label-hold::before {
+  /* boxline에 영향을 주지 않음 */
   outline: 2px solid black;
   outline-offset: 5px;
 }
