@@ -1,0 +1,77 @@
+* {
+  text-align: left;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.btn-select {
+  position: relative;
+  width: 200px;
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 13px 14px;
+}
+
+.btn-select:active {
+  border: 1px solid #9b51e0;
+}
+
+.btn-select::after {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-image: url("images-select/Polygon_downArrow.png");
+  background-size: 10px 10px;
+}
+
+.list-member {
+  display: none;
+  width: 200px;
+  padding: 0;
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+  list-style: none;
+}
+
+.btn-select.on + .list-member {
+  display: block;
+}
+
+.btn-select.on::after {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-image: url("images-select/Polygon_upArrow.png");
+  background-size: 10px 10px;
+}
+
+.list-member li {
+  width: 100%;
+  padding: 5px 8px;
+  box-sizing: border-box;
+}
+
+.list-member li button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 7px 10px;
+  box-sizing: border-box;
+  background: none;
+  border: none;
+}
+
+.list-member li button:hover {
+  background-color: #f8e4ff;
+  border-radius: 8px;
+}
