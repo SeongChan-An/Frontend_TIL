@@ -10,3 +10,6 @@ bootstrap/img
 tailwind/img
 SASS/examples
 SASS/practice/*.css.map
+node_modules
+package-lock.json
+package.json
