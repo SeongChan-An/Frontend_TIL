@@ -3,15 +3,66 @@
 - Array(배열)
   - 형태 : ['하나', '둘', '셋'], [100, 200, 300],
   - 호출 : 변수명, 변수명[0], 변수명[0][0] (변수명[index])
+  - 메서드 :
+    - length
+    - forEach(콜백함수)
+    - map
+    - filter
+    - push / pop - mutable
+    - slice - immutable
+    - splice - mutable
+    - reduce - immutable
+    - join
+    - indexOf
+    - includes
+    - find
+    - concat
+    - every
+    - some
+    - fill — mutable
+    - shift — mutable
+    - unshift — mutable
+    - reverse — mutable
+    - sort — mutable
 - String(문자열)
   - 형태 : 'abcde', "abcde", `abcde`
   - 호출 : 변수명, 변수명[0] (변수명[index])
+  - 메서드 :
+    - str.length
+    - str.indexOf()
+    - str.lastIndexOf()
+    - str.includes()
+    - str.split()
+    - str.substring()
+    - str.substr()
+    - str.toLowerCase()
+    - str.toUpperCase()
+    - str.trim()
+    - str.math()
+    - str.replace()
+    - str.concat()
 - Number(숫자)
   - 형태 : 10, 10.123
   - 호출 : 변수명
+  - 메서드 :
+    - num.toString
+    - num.toFixed()
+    - Number.IsInteger
+    - Number()
+  - parseInt(), parseFloat()
+  - Math
+    - Math.max()
+    - Math.min()
+    - Math.floor()
+    - Math.round()
+    - Math.random()
+    - Math.abs()
+    - Math.sqrt()
+    - Math.pow()
 - Boolean(논리값)
   - 형태 : true, false
   - 호출 : 변수명
+  - 메서드 :
 - Object(객체)
   - 형태 :
     ```javascript
@@ -24,6 +75,17 @@
     }
     ```
   - 호출 : 변수명, 변수명.지역이름, 변수명['지역이름'] (변수명.key, 변수명[key])
+  - 속성 :
+  ```js
+  console.log(Object.getOwnPropertyDescriptor(person, "name"));
+  Object.getOwnPropertyDescriptors(person);
+  // {10: {…}, name: {…}, age: {…}, height: {…}, weight: {…}, 이력: {…}}
+  // value: '이호준',
+  // writable: true, // 변경 가능 여부, 기본값 false
+  // enumerable: true, // 열거(for) 가능 여부, 기본값 false
+  // configurable: true // 재정의 가능 여부, 기본값 false
+  ```
+  - 메서드 : Object.keys, Object.values, Object.
 - undefine : undefind
 - null : object
 - NaN : number
@@ -155,11 +217,28 @@ for (let i = 0; i < 10; i++) {
 
 ## 함수
 
-- 함수
+- 함수(파선아실)
 
   - 여기서 x, y를 보통 한국에서는 인자
-  - 전달인자(아규먼트, argument) : 3, 5
   - 매개변수(파라미터, parameter) : x, y
+  - 전달인자(아규먼트, argument) : 3, 5
+  - 사용이유
+    1. 재사용성
+    2. 아키텍처 파악
+    3. 유지보수
+    ```js
+    function 땅다지기() {}
+    function 시멘트작업() {}
+    function 철근() {}
+    function 벽돌() {}
+    function 지붕() {}
+    땅다지기();
+    시멘트작업();
+    철근();
+    벽돌();
+    지붕();
+    ```
+  - 예제
 
   ```js
   function add(x, y) {
@@ -167,6 +246,27 @@ for (let i = 0; i < 10; i++) {
   }
 
   add(3, 5);
+
+  function add(a = 100, b = 200) {
+    return a + b;
+  }
+
+  add(10, 20);
+  // 30
+  add(10);
+  // 210
+  add();
+  // 300
+  add((b = 300));
+  // 500
+  add(undefined, 300);
+  // 400
+
+  function add({ a = 100, b = 200 }) {
+    console.log(a + b);
+  }
+
+  add({ b: 300 });
   ```
 
 - 콜백함수
@@ -283,3 +383,16 @@ for (let i = 0; i < 10; i++) {
 - prompt('hello')
 - comfirm('hello')
 - alert('hello')
+
+## 언패킹
+
+- 예제
+
+```js
+for (let [[i, j], k] of [
+  [[1, 2], 2],
+  [[1, 2], 4],
+]) {
+  console.log(i, j);
+}
+```
