@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  height: 100vh;
+  position: relative;
+}
+
+.container {
+  width: 500px;
+  height: 640px;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 1px 8px 17px 14px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+  z-index: 1;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.header .headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.header .title {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.header span {
+  position: relative;
+  font-size: 25px;
+  font-weight: bold;
+  align-self: center;
+  bottom: -15px;
+}
+
+.textContents {
+  display: flex;
+  justify-content: space-around;
+  width: auto;
+  font-size: 10px;
+}
+
+/* .textContents .CountryInfo {
+  display: inline-block;
+  width: 25%;
+}
+
+.textContents .etcInfo {
+  margin-left: -30px;
+}
+
+.textContents .webAddress {
+  width: 60%;
+} */
+
+.mainContents {
+  padding: 50px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* flex-direction: column;
+  align-items: center;
+  align-content: space-around; */
+}
+
+.mainContents div {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.mainContents .skyblue {
+  background: skyblue;
+}
+.mainContents .darkgrey {
+  background: darkgrey;
+}
+.mainContents .green {
+  background: green;
+}
