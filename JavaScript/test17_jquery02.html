@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 실습</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: palevioletred;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            opacity: 0.3;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>    
+    <!-- 
+    1. items 부모를 찾아 background-color를 파란색으로 바꿔주세요.
+    2. items 2번째 color를 빨간색으로 바꿔주세요
+    3. ul2의 자식인 li요소를 선택하여 1번부터 3번까지 color를 녹색으로 바꿔주세요.
+    4. ul2의 자식인 li요소를 선택하여 7번부터 10번까지 color를 파란색, background-color를 빨간색으로 바꿔주세요. 
+    -->
+    <div class="wrapper">
+        <h1 class="title">TITLE</h1>
+        <ul>
+            <li class="items">item 1</li>
+            <li class="items">item 2</li>
+            <li class="items">item 3</li>
+        </ul>
+    </div>
+    <ul class="ul2">
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+    </ul>
+    <div id="div1">hello world</div>
+    <div class="one blue">hello world</div>
+    <div class="two blue">hello world</div>
+    <p class="blue">hello world</p>
+    <div class="three">hello</div>
+    <div class="three blue">hello</div>
+    <div class="box">hello world</div>
+    <div class="box2">hello world</div>
+    <button class="btn3">push~</button>
+    <script>
+        // 1번
+        $(".items").parent().css("backgroundColor", "blue");
+        // 2번
+        // $(".items:nth-child(2)").css("color", "red");
+        $(".items").eq(1).css("color", "red");
+        // 3번
+        // n = 0, 1, 2...
+        // $(".ul2 li:nth-child(n+1):nth-child(-n+3)").css("color", "green");
+        $(".ul2").children("li:lt(3)").css("color", "green");
+        // 4번
+        // $(".ul2 li:nth-child(n+7):nth-child(-n+10)").css("color", "red");
+        $(".ul2").children("li:gt(5)").css("color", "red");
+
+        ///////////////
+        // $(".ul2 :nth-child(n+3)").css("color", "green");
+        $("ul").append("<li>hello world end</li>");
+        $("ul").prepend("<li>hello world start</li>");
+        $("ul").after("<h2>끝 !</h2>");
+        $("ul").before("<h2>시작 !</h2>");
+        // $("#div1").remove()
+        $("#div1").addClass("important");
+        $(".one, .two .p").removeClass("blue");
+        $(".three").toggleClass("blue");
+        $(".box").fadeOut(3000).fadeIn(3000);
+        $(".box").click(function() {
+            // https://electronic-moongchi.tistory.com/75
+            $(this).stop();
+        })
+
+        // 
+        // div 클릭 했을 때 안보이게 하기
+        // dom이 준비되면 실행해라.
+        $(function() {
+            $(".box").click(function() {
+                $(this).hide();
+            });
+        });
+        $(".btn3").click(function() {
+            $(".box2").animate({
+                width: "300px",
+                height: "300px",
+                opacity: 1,
+            }, "slow");
+        });
+        $(".box2").hover(function(){
+            $(this).css("background-color", "yellow");
+        }, function(){
+            $(this).css("background-color", "blue");
+        });$(".box2").hover(function(){
+            $(this).css("back")
+        })
+    </script>
+
+</body>
+</html>
