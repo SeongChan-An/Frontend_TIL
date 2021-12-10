@@ -1,7 +1,0 @@
-@mixin hojun-font($x, $y) {
-  font-size: $x * $y + px;
-}
-
-div {
-  @include hojun-font(10, 10);
-}
