@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <style>
+        /* body{
+            height: 100vh;
+        } */        
+        /* 
+        padding-top:50%; (padding을 감싸고있는 부모의 50%가 padding-top 값이 된다.
+        padding 값에 %값은 부모의 width값 기준이다!
+         */
+         video {
+            width: 100%;
+        }
+
+        article {
+            position: relative;
+            padding-top: 56.25%;
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- <video controls width="500">    
+        <source src="./video/next_level.mp4" type="video/mp4">
+    </video>
+
+    <video poster="" autoplay muted controls src="./video/next_level.mp4"></video>
+
+    <iframe width="901" height="507" 
+    src="https://www.youtube.com/embed/WPdWvnAAurg?autoplay" 
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+    <article>
+        <iframe src="https://www.youtube.com/embed/4TWR90KJl84?autoplay=1&controls=1&mute=1&loop=1&playlist=4TWR90KJl84"
+            title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </article>
+</body>
+</html>

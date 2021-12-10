@@ -1,0 +1,85 @@
+<!-- 2.kim mj -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button</title>
+    <style>
+        button{
+            position: relative;
+            border: 1px solid salmon;
+            width: 300px;
+            height: 150px;
+            overflow: hidden;
+            font-size: 32px;
+            background-color: rgb(4, 4, 92);
+            cursor: pointer;
+
+        }
+
+        #btn{
+            background-color: transparent;
+        }
+
+        button .btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: -100px;
+            left: 100px;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background-color: red;
+        }
+
+        button:active::before{
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 25px;
+            left: 100px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 0 50px 20px rgb(255, 169, 71);
+        }
+
+
+        button:active::after{
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 75px;
+            left: 120px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgb(255, 108, 71);
+            box-shadow: 50px 0 0px 0.1px rgb(255, 108, 71);
+        }
+
+
+        button:hover .btn{
+            transform: translateY(-125px);
+            background-color: rgb(255, 215, 0);
+            transition: all 1s linear;
+        }
+
+        button:hover{
+            transition: all 1s linear;
+            background-color: rgb(255, 196, 0);
+        }
+    </style>
+</head>
+<body>
+    <button> 
+        <div class="btn">
+            '_'
+        </div>
+    </button>
+</body>
+</html>

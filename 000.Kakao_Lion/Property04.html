@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-Index</title>
+    <link rel="stylesheet" href="Property04.css">
+</head>
+<body>
+    <h1>z-index</h1>
+    <p>예제(1) z-index를 아무것도 지정해 주지 않으면 기본으로 0으로 적용되고, dom구조 하단에 위치 할 수록 우선순위는 올라갑니다. <strong>(A &lt; B &lt; C)</strong><br><br>예제(2)에서는 B를 C보다 위에 놓은 경우입니다. B에만 z-index:1 을 주면 나머지 요소들은 0 이니까 최상단으로 올라오게 되는 것 입니다. <strong>(A &lt; C &lt; B)</strong></p>
+
+    <br>
+    <a href="https://developer.mozilla.org/ko/docs/Web/CSS/Understanding_z-index/Adding_z-index" target="_blank">https://developer.mozilla.org/ko/docs/Web/CSS/Understanding_z-index/Adding_z-index</a>
+    <br><br>
+    
+    <div class="wrap">
+        예제(1)
+        <div class="a">A (z-index: 0)</div>
+        <div class="b">B (z-index: 0)</div>
+        <div class="c">C (z-index: 0)</div>
+    </div>
+
+    <div class="wrap ex2">
+        예제(2)
+        <div class="a">A (z-index: 0)</div>
+        <div class="b">B (z-index: 1)</div>
+        <div class="c">C (z-index: 0)</div>
+    </div>
+</body>
+</html>

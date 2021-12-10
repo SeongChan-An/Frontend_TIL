@@ -1,0 +1,52 @@
+div.a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: #00f;
+}
+.wrap {
+  position: relative;
+  margin: 10px auto;
+  width: 500px;
+  height: 500px;
+  border: 1px solid #f00;
+}
+.wrap div.b {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: #f00;
+}
+
+/* just for demo */
+body {
+  margin: 0;
+  border: 1px solid #00f;
+}
+* {
+  text-align: center;
+}
+p {
+  margin: 0 auto;
+  width: 600px;
+}
+div.a,
+div.b {
+  font-size: 100px;
+  color: #fff;
+}
+span.a,
+span.b {
+  font-size: 20px;
+  font-weight: bold;
+}
+span.a {
+  color: #00f;
+}
+span.b {
+  color: #f00;
+}

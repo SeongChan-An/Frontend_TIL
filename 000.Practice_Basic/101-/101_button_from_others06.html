@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>button</title>
+  <style>
+    body {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: antiquewhite;
+    }
+    .axis {
+      /* border: 1px solid red; */
+      border-style: none;
+      background: none;
+      width: 200px;
+      height: 50px;
+      perspective: 400px;
+      cursor: pointer;
+      position: relative;
+    }
+    .btn {
+      /* border: 1px solid red; */
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: all .5s;
+      font-size: 42px;
+    }
+    .btn:hover {
+      transform: rotateX(360deg);
+    }
+    .btn:active {
+      transform: rotateX(350deg) rotateY(5deg);
+      transition: all .1s;
+    }
+    .btn div[class^=btn] {
+      position: absolute;
+      border: 1px solid black;
+      width: 200px;
+      height: 50px;
+      text-align: center;
+    }
+    .btn1 {
+      transform: rotateX(0deg) translateZ(25px);
+      background-color: red;
+      color: whitesmoke;
+    }
+    .btn2 {
+      transform: rotateX(90deg) translateZ(25px);
+      background-color: green;
+      color: whitesmoke;
+    }
+    .btn3 {
+      transform: rotateX(180deg) translateZ(25px);
+      background-color: blue;
+      color: whitesmoke;
+    }
+    .btn4 {
+      transform: rotateX(270deg) translateZ(25px);
+      background-color: purple;
+      color: whitesmoke;
+    }
+  </style>
+</head>
+<body>
+  <button class="axis">
+    <div class="btn">
+      <div class="btn1">Click Me!!</div>
+      <div class="btn2">Click Me!!</div>
+      <div class="btn3">Click Me!!</div>
+      <div class="btn4">Click Me!!</div>
+    </div>
+  </button>
+</body>
+</html>

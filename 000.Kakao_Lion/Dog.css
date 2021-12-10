@@ -1,0 +1,104 @@
+/* 가상 클래스를 이용하여 기본 설정을 해준다. */
+:root {
+  /* 눈이 아프니 흰 바탕을 없애준다. */
+  background: beige;
+  /* 이건 margin의 영향만 받아서 내가 복잡한 생각을 하지 않도록 */
+  box-sizing: border-box;
+}
+
+/* 기본 뼈대  */
+.dog {
+  /* 
+  위치는 부모 기준으로 상대적으로 
+  마진으로 설정예정
+  */
+  position: relative;
+  /* 
+  상하를 px 값을 주고 좌우는 auto를 통해 가운데 정렬을 해준다
+  좌우 auto 를 주었기 때문에 기본 width 값을 설정해줘야 한다. 
+  */
+  margin: 250px auto;
+  width: 400px;
+  height: 400px;
+}
+
+/* 기본 얼굴 형태를 그려준다 */
+.dog .face {
+  /* 
+  absoulute는 절대위치? 를 말하지만 부모의 기준이다. */
+  position: absolute;
+  /* 정해진 위치를 기준으로 준다. 여기서는 바닥기준 */
+  bottom: 0;
+  /* 얼굴형태를 조금 직사각형으로 */
+  width: 380px;
+  height: 400px;
+  /* 먼저 border 속성을 줘서 혹시나 중간에 보고 싶을 때 보자 */
+  border: 12px solid #000;
+  /* 
+  https://codepen.io/laviperchik/pen/mAHwE 보고 이해하고
+  작성해보자 
+  '/' 통해 좌측은 평행(width) 우측은 직각(height) 이다.
+  border-radius : [top left] [top right] [bottom right] [bottom left] / [top left] [top right] [bottom right] [bottom left] 
+  약간 하관으로 내려갈 수록 좁아지는 걸 표현하고 싶었다.
+  */
+
+  border-radius: 60px 60px 100px 100px/ 60px 60px 180px 180px;
+  background: rgb(250, 250, 231);
+}
+
+/* 이제 귀 차례다. */
+
+.dog .ear {
+  position: absolute;
+  /* 얼굴을 고정했으니 귀는 위쪽에 붙일 예정으로 상단기준으로 잡아준다 */
+  top: 0;
+  /* 귀의 크기를 다르게 할 것이기 때문에 여기서는 x */
+  border: 12px solid #000;
+}
+
+/* 양쪽 귀를 떨어뜨려놓자 */
+/* width와 height를 그냥 보면서 고침. */
+.dog .ear.left {
+  width: 200px;
+  height: 120px;
+  left: -140px;
+  top: -158px;
+  border-radius: 30px 140px 30px 140px / 140px;
+}
+/* 접힌 귀를 표현하고 싶었는데 쉽지 않다.. */
+.dog .ear.right {
+  width: 130px;
+  height: 140px;
+  right: -20px;
+  top: -180px;
+  border-radius: 60px 60px 100px 100px / 30px 30px 180px 180px;
+}
+
+/* 이제 눈 */
+.dog .eye {
+  position: absolute;
+  top: 80px;
+  width: 70px;
+  height: 36px;
+  border-radius: 80%;
+  background: #000;
+}
+
+.dog .eye.left {
+  left: 80px;
+}
+
+.dog .eye.right {
+  right: 80px;
+}
+
+.nose {
+  position: absolute;
+  background: #000;
+  width: 10%;
+  height: 5%;
+  border-radius: 100%;
+  box-shadow: 1;
+  top: 60%;
+  left: 50%;
+}

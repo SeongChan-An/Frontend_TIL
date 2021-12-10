@@ -1,0 +1,180 @@
+#appLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.cont-login {
+  width: 440px;
+  height: 172px;
+  padding: 38px 30px 30px;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  text-align: center;
+}
+.cont-login .tit-weniv img {
+  /*
+    이미지가 display 설정을 하지 않으면 inline 요소 
+    baseline이 있기 때문에 top으로 정렬하지 않으면 움직임
+    현재는 reset css에 설정함T
+    vertical align baseline
+    */
+  width: 122px;
+}
+.cont-login .txt-login {
+  margin: 32px 0 36px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+/* Modal Style */
+.modal-login {
+  display: none;
+  height: 100%;
+}
+
+.modal-login.on {
+  display: block;
+}
+
+.modal-login::after {
+  display: block;
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 10;
+}
+
+.modal-login .cont-form-login {
+  width: 100%;
+  max-width: 520px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  z-index: 20;
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+}
+
+.cont-form-login .tit-form {
+  padding: 20px 0 18px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.cont-form-login .txt-form {
+  margin: 26px 0 24px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.cont-form-login .form-login {
+  padding: 0 24px 0;
+  /* 나머지 일부 txt를 변경해야함 */
+  text-align: center;
+}
+.form-login .inp-error {
+  text-align: left;
+}
+.form-login .label-hold {
+  text-align: left;
+  display: block;
+  cursor: pointer;
+  margin: 17px 0 21px;
+}
+
+.form-login .label-hold::before {
+  display: inline-block;
+  content: "";
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+  background-image: url("../images-login/icon_check_empty.png");
+  vertical-align: -5px;
+}
+/* 접근성 */
+.form-login .inp-hold:focus + .label-hold::before {
+  /* boxline에 영향을 주지 않음 */
+  outline: 2px solid black;
+  outline-offset: 5px;
+}
+
+.form-login .inp-hold:checked + .label-hold::before {
+  background-image: url("../images-login/icon_check.png");
+}
+
+.form-login a[class^="link"] {
+  display: inline-block;
+  margin-top: 20px;
+  line-height: 18px;
+  font-size: 14px;
+  color: #767676;
+  text-decoration: none;
+}
+
+.form-login .link-signup::after {
+  display: inline-block;
+  content: "\007C";
+  margin: 0 10px;
+}
+
+.cont-form-login .btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 22px 24px;
+  /* 기본적으로 border-box이지만 따로 클로즈버튼에만 적용 */
+  box-sizing: content-box;
+  /* 아래 라인이 지워짐 그래서 지우지 않는 방법 */
+  /* case 1 */
+  background-color: transparent;
+  /* case 2 */
+  /* z-index: -1;
+  border-radius: 10px; */
+}
+
+.cont-form-login .cont-sns-login {
+  position: relative;
+  margin-top: 30px;
+  padding: 30px 24px 25px;
+}
+.cont-form-login .cont-sns-login::before {
+  content: "또는";
+  display: block;
+  width: 52px;
+  height: 18px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background-color: #fff;
+  z-index: 10;
+}
+
+.cont-sns-login::after {
+  content: "";
+  display: block;
+  width: calc(100% - 48px);
+  position: absolute;
+  top: 9px;
+  height: 1px;
+  background-color: #c4c4c4;
+}
+
+.cont-sns-login .lists-sns li + li {
+  margin-top: 10px;
+}

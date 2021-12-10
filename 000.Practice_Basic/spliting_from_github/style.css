@@ -1,0 +1,62 @@
+@keyframes object-rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    /* 정확히 한바퀴를 돌리고 싶을 때 사용 */
+    transform: rotateY(1turn);
+  }
+}
+
+@keyframes scene-rotate {
+  0% {
+    transform: rotateX(0) rotateZ(0);
+  }
+  100% {
+    transform: rotateX(10deg) rotateZ(-20deg);
+  }
+}
+
+body {
+  width: 100vw;
+}
+
+.container {
+  position: absolute;
+  /* 화면을 늘린다 */
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  /* 뒤로 한칸 이동 */
+  z-index: -1;
+  /* 내부의 컨테이너 중앙정렬 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scene {
+  /* 상속이 되지 않음 */
+  transform-style: preserve-3d;
+  /* 회전 */
+  /* transform: rotateX(10deg); */
+  animation: scene-rotate 10s linear infinite alternate;
+}
+
+.circle {
+  font-size: 50px;
+  font-weight: bold;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: object-rotate 5s linear infinite;
+  transform-style: preserve-3d;
+}
+.circle .word {
+  transform-style: preserve-3d;
+}
+.circle span {
+  /* background-color: goldenrod; */
+  position: absolute;
+  /* transform: rotateY(calc(var(--char-index) * 12deg)) translateZ(250px); */
+  transform: rotateY(calc(var(--char-index) * 5deg)) translateZ(800px);
+}
