@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="DomPractice13_Practical_Practice02.css">
+
+</head>
+
+<body>
+
+  <h2>셀렉트 박스 만들기</h2>
+  <article class="cont-select">
+    <button class="btn-select">나의 최애 프로그래밍 언어</button>
+    <ul class="list-member">
+
+    </ul>
+  </article>
+  <script>
+    const btn = document.querySelector('.btn-select'); //select
+    const ul = document.querySelector('.list-member'); //ul
+
+
+    let arr = ["Python", "Java", "JavaScript", "C#", "C/C++"];
+    for (let i = 0; i < arr.length; i++) {
+      const li = document.createElement("li");
+      ul.append(li);
+      li.innerHTML = `<button type='button'>${arr[i]}</button>`;
+    }
+
+    const listAll = ul.querySelectorAll('button'); // option list
+    const firstOption = ul.querySelector('button'); //option first button
+    const lastOption = listAll[listAll.length - 1]; //option last button
+
+
+    const handlClickSelect = function () {
+      btn.classList.toggle('on');
+      ul.classList.toggle('on');
+    }
+    const handlClickOption = function (e) {
+      btn.innerHTML = e.target.innerText;
+      btn.classList.remove('on');
+      ul.classList.remove('on');
+      window.setTimeout(function () {
+        btn.focus();
+      }, 100);
+    }
+
+    //focus 이동
+    const handleTabFoucus = function (e) {
+      if (!e.shiftKey && e.keyCode === 9) {
+        e.preventDefault();
+        window.setTimeout(function () {
+          firstOption.focus();
+        }, 100);
+      }
+    };
+    //shift+tab
+    const handlShiftTabFoucus = function (e) {
+      if (e.shiftKey && e.keyCode === 9) {
+        e.preventDefault();
+        window.setTimeout(function () {
+          lastOption.focus();
+        }, 100);
+      }
+    };
+    //ESC키 
+    const hadleEsc = function (e) {
+      if (e.keyCode === 27) {
+        btn.classList.remove('on');
+        ul.classList.remove('on');
+        window.setTimeout(function () {
+          btn.focus();
+        }, 100);
+      }
+    }
+
+    btn.addEventListener('click', handlClickSelect);
+    ul.addEventListener('click', handlClickOption);
+
+    btn.addEventListener('keydown', hadleEsc);
+    ul.addEventListener('keydown', hadleEsc);
+
+    lastOption.addEventListener('keydown', handleTabFoucus);
+    firstOption.addEventListener('keydown', handlShiftTabFoucus);
+
+  </script>
+</body>
+
+</html>

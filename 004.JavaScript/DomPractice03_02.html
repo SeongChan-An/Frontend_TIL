@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .canvas {
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            background-color: black;
+        }
+
+        .canvas.red {
+            background-color: red;
+        }
+
+        .canvas.yellow {
+            background-color: yellow;
+        }
+
+        .canvas.blue {
+            background-color: blue;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            width: 500px;
+            margin: 50px auto 0;
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parentElement">
+        <span id="childElement">hello guys~</span>
+    </div>
+    <script>
+        // parentElement.insertBefore(target, location); target요소를 element의 자식인 location 위치로 이동합니다.
+
+        let span = document.createElement("span");
+        let sibling = document.getElementById("childElement");
+        let parentDiv = document.getElementById("parentElement");
+        parentDiv.insertBefore(span, sibling);
+    </script>
+</body>
+
+</html>
